@@ -1,0 +1,29 @@
+### 등록
+POST http://localhost:8080/rest/book/save
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="bookNo"
+
+B-001
+--WebAppBoundary--
+Content-Disposition: form-data; name="deptName"
+
+공통개발팀
+--WebAppBoundary
+Content-Disposition: form-data; name="title"
+
+스프링 5.0
+--WebAppBoundary--
+
+### 모든 리스트
+GET http://localhost:8080/rest/book/list
+Accept: application/json
+
+### 책제목 검색
+GET http://localhost:8080/rest/book/list?title=스프링
+Accept: application/json
+
+### 삭제
+GET http://localhost:8080/rest/book/delete?id=2
+Accept: application/json

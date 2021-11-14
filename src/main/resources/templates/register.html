@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default">
+
+<div layout:fragment="content">
+    <div id="app">
+        <h1>희망 도서 신청</h1>
+        <form>
+            <div>
+                <label for="deptNm">신청 부서</label>
+                <input type="text" id="deptNm" v-model="deptNm" readonly>
+            </div>
+            <div>
+                <label for="registerNm">신청자 이름</label>
+                <input type="text" id="registerNm" v-model="registerNm" readonly>
+            </div>
+            <div>
+                <label for="bookNm">도서 이름</label>
+                <input type="text" id="bookNm" required>
+            </div>
+            <div>
+                <label for="publisher">출판사</label>
+                <input type="text" id="publisher" required>
+            </div>
+            <div>
+                <label for="bookPrice">도서 금액</label>
+                <input type="text" id="bookPrice" required>
+            </div>
+            <div>
+                <label for="saveRsn">신청 사유</label>
+                <input type="text" id="saveRsn">
+            </div>
+            <button type="submit">등록</button>
+        </form>
+    </div>
+    <script>
+        var bookRegisterVM = new Vue({
+            el: '#app',
+            data: {
+                deptNm : '공통개발팀',
+                registerNm : '이성교',
+            },
+            computed: {
+
+            },
+            watch: {
+
+            },
+            beforeCreate: function () {
+                // data와 이벤트($on, $once, $off, $emit), 감시자($watch)등이 설정 되기 전에 호출되는 라이프 사이클 훅입니다.
+            },
+            created: function () {
+                // DOM이 마운팅 되기 전이기 때문에 $el은 사용할 수 없습니다.
+            },
+            beforeMount: function() {
+                // $el은 아직 사용할 수 없습니다. 거의 사용되지않는 라이프사이클
+            },
+            mounted: function () {
+                // $el 을 사용할 수 있습니다.
+                // 모든 화면이 렌더링된 후 호출됩니다.
+            },
+            methods: {
+
+            },
+
+        })
+    </script>
+</div>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>레몬헬스케어 도서관린 페이지</title>
+
+    <!-- 개발버전, 도움되는 콘솔 경고를 포함. -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{ message }}
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: '안녕하세요 Vue!'
+            },
+            computed: {
+
+            },
+            watch: {
+
+            },
+            beforeCreate: function () {
+                // data와 이벤트($on, $once, $off, $emit), 감시자($watch)등이 설정 되기 전에 호출되는 라이프 사이클 훅입니다.
+            },
+            created: function () {
+                // DOM이 마운팅 되기 전이기 때문에 $el은 사용할 수 없습니다.
+            },
+            beforeMount: function() {
+                // $el은 아직 사용할 수 없습니다. 거의 사용되지않는 라이프사이클
+            },
+            mounted: function () {
+                // $el 을 사용할 수 있습니다.
+                // 모든 화면이 렌더링된 후 호출됩니다.
+            },
+            method: {
+
+            },
+
+        })
+    </script>
+</body>
+</html>

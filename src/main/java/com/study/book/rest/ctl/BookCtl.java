@@ -41,4 +41,10 @@ public class BookCtl {
         return new ResponseEntity<>(this.bookSvr.delete(params), HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/detail", method = RequestMethod.GET)
+    public ResponseEntity<ResBook> detail(ReqBookParams params){
+        log.info("[정보] params : {}", params.toString());
+        return new ResponseEntity<>(this.bookSvr.detail(params), HttpStatus.OK);
+    }
+
 }

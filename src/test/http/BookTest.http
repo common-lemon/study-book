@@ -27,3 +27,7 @@ Accept: application/json
 ### 삭제
 GET http://localhost:8080/rest/book/delete?id=2
 Accept: application/json
+
+### 책 상세
+GET http://localhost:8080/rest/book/detail?id=1
+Accept: application/json

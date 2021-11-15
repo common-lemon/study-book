@@ -80,4 +80,15 @@ public class BookSvrImpl implements BookSvrItf {
 
         return resBook;
     }
+
+    @Override
+    public ResBook detail(ReqBookParams reqBookParams) {
+        ResBook resBook = new ResBook();
+        resBook.setResCode("S-001");
+        resBook.setResMsg("정상 처리 되었습니다.");
+
+        resBook.setBookEntity(this.bookRepository.findById(reqBookParams.getId()).orElse(null));
+
+        return resBook;
+    }
 }
